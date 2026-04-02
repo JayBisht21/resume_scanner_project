@@ -122,7 +122,7 @@ with st.container(border=True):
     with col1:
         st.image("https://cdn-icons-png.flaticon.com/512/3135/3135673.png", width=80) 
     with col2:
-        st.title("Ai Resume Sorting Scanner and Dashboard")
+        st.title("AI RESUME SORTING SCANNER & DASHBOARD")
         st.markdown("**AI-Powered Resume Screening & Bias-Aware Analytics Dashboard**")
         # Added your name here!
         st.markdown("*Architecture & Engineering by **Jay Bisht & Sawan Saklani***")
