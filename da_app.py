@@ -8,7 +8,7 @@ import time
 import pandas as pd
 
 # --- Page Configuration ---
-st.set_page_config(page_title="AI Resume Scanner", layout="wide")
+st.set_page_config(page_title="Resume Sorting Scanner by Jay Bisht & Sawan Saklani", layout="wide")
 
 # --- Text Extraction Functions ---
 def extract_text_from_pdf(file_bytes):
@@ -76,7 +76,7 @@ def score_resume_dynamically(text, rules_df, mode):
                 explanations.append(f"❌ **0 pts:** Did not clearly match '{target}' domain")
 
     # Simulate Semantic Deep Learning Boost
-    if mode == "1-Hour Mode (Deep Analysis)":
+    if mode == "🔥 Advanced Mode (Semantic AI Matching)":
         total_score += 15
         explanations.append("🤖 **+15 pts:** Semantic Neural Engine detected high contextual relevance in work history.")
 
@@ -122,8 +122,8 @@ if st.sidebar.button("Analyze Applicant Pool") and uploaded_file is not None:
     with st.spinner(f"Engine running: {processing_mode}..."):
         
         # Simulate loading times
-        if processing_mode == "20-Minute Mode (Medium NLP)": time.sleep(1.5)
-        elif processing_mode == "1-Hour Mode (Deep Analysis)": time.sleep(3)
+        if processing_mode == "🧠 Smart Mode (NLP Matching)": time.sleep(1.5)
+        elif processing_mode == "⚡ Basic Mode (Keyword Matching)": time.sleep(3)
             
         # Process files
         if uploaded_file.name.endswith('.zip'):
