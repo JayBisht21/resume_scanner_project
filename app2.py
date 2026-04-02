@@ -9,7 +9,7 @@ import pandas as pd
 
 # --- Page Configuration & Custom CSS ---
 # Added your name to the browser tab!
-st.set_page_config(page_title="AI Resume Scanner | Jay Bisht", page_icon="👔", layout="wide")
+st.set_page_config(page_title="AI Resume Scanner | Jay Bisht & Sawan Saklani", page_icon="👔", layout="wide")
 
 # Inject Custom CSS for a sleek, enterprise SaaS look
 st.markdown("""
@@ -150,13 +150,13 @@ edited_rules_df = st.sidebar.data_editor(
 st.sidebar.markdown("#### 2. Select Processing Tier")
 processing_mode = st.sidebar.selectbox(
     "Algorithmic Depth",
-    ("1-Minute Mode (Fast String Match)", "20-Minute Mode (Contextual NLP)", "1-Hour Mode (Deep Semantic Analysis)"),
+    ("⚡ Basic Mode (Keyword Matching)", " 🧠 Smart Mode (NLP Matching)", "🔥 Advanced Mode (Semantic AI Matching)"),
     label_visibility="collapsed"
 )
 
 st.sidebar.markdown("#### 3. Data Intake")
 uploaded_file = st.sidebar.file_uploader("Drop candidate .zip, .pdf, or .docx", type=['pdf', 'docx', 'zip'])
-analyze_button = st.sidebar.button("🚀 Initialize Neural Scan")
+analyze_button = st.sidebar.button("🚀 Initialize Scan")
 
 # Added a sleek signature block for you at the bottom of the sidebar
 st.sidebar.markdown("---")
@@ -166,7 +166,7 @@ st.sidebar.markdown(
 )
 
 # --- Main Interface ---
-tab1, tab2 = st.tabs(["📋 Talent Pipeline", "📊 Macro Analytics"])
+tab1, tab2 = st.tabs(["📋 Resume Scores", "📊 Macro Analytics"])
 
 results = []
 
@@ -264,4 +264,4 @@ if results:
 elif uploaded_file is None:
     with tab1:
         st.markdown("<br><br><br>", unsafe_allow_html=True)
-        st.info("💡 **System Ready:** Configure your scoring parameters in the sidebar and upload a batch of candidate resumes to initialize the talent pipeline.")
+        st.info("💡 **System Ready:** Upload your Resumes to Analyze.")
